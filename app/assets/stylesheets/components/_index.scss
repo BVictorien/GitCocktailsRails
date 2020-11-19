@@ -1,0 +1,21 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "navbar";
+@import "banner";
+@import "footer";
+@import "card";
+
+.container-cocktails {
+  background-color: white;
+  padding: 40px;
+  margin: 55px;
+  border-radius: 15px;
+}
+
+.container-newcocktails {
+  background-color: white;
+  padding: 40px;
+  margin: 55px;
+  border-radius: 15px;
+}
