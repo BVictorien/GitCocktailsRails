@@ -1,1 +1,19 @@
 <%= render 'components/banner' %>
+
+
+<div class="container m-10">
+  <div class="row row-cols-1 row-cols-md-2">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col mb-4">
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2016/11/23/14/49/alcohol-1853327_960_720.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title"><%= cocktail.name %></h5>
+              <p><%= link_to 'See more', cocktail_path(cocktail), class: 'btn' %></p>
+              <p> <%= link_to 'Delete', cocktail_path(cocktail), confirm: 'Are you sure?', method: :delete, class:'btn btn-mini btn-danger' %></p>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
