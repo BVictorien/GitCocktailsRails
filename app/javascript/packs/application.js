@@ -16,3 +16,18 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import 'bootstrap';
+
+window.onload = function(){
+
+  TweenMax.set('body', {opacity:1});
+  let tl = new TimelineMax();
+  
+  tl
+    // .from('.article1', 1, {x: 500, opacity: 0})
+    .from('.banner', 2, {opacity: 0, y:-200, ease: Expo.easeOut}, 1)
+    .from('.card', 2, {opacity: 0, y:200, ease: Expo.easeOut}, 2)
+    .from('.btn-primary', 2, {opacity: 0, x:-200, ease: Expo.easeOut}, 3)
+    .from('.btn-danger', 2, {opacity: 0, x:200, ease: Expo.easeOut}, 3)
+
+  
+  }
